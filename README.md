@@ -23,7 +23,7 @@ npm run test
  ```
 ## Runing
 
-Once running you have to feed submission date the format of YY-MM-DDThh:mm:ssZ and the turnaround time in hours 
+Once running you have to feed submission date in the format of YY-MM-DDThh:mm:ssZ and the turnaround time in hours 
 
 ```
 npm start 2019-10-18T16:02:00Z 10
