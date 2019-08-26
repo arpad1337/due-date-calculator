@@ -21,6 +21,9 @@ export class DateUtils {
      * @returns {Date}
      */
     public static calculateDueDate(submissionDate: Date, turnaroundHours: number): Date {
+        if (turnaroundHours < 0) {
+            throw new Error('turnaroundHours must be positive');
+        }
         let remainingTime = turnaroundHours * DateUtils.ONE_HOUR_MS;
         let cursor = +submissionDate;
         let startHour = submissionDate.getHours();
