@@ -1,0 +1,17 @@
+{
+  "name": "due-date-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/program.js",
+  "scripts": {
+    "build": "tsc --module commonjs --target ES5 --outDir ./dist ./src/*.ts",
+    "start": "node ./dist/program.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "tsc": "^1.20150623.0"
+  }
+}
