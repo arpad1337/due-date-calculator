@@ -3,9 +3,8 @@ var Program = (function () {
     function Program() {
     }
     Program.main = function (argv) {
-        console.log(argv);
         if (argv.length < 2) {
-            throw new Error("You must supply submissionDate && turnaround hours as arguments");
+            throw new Error("You must supply submissionDate && turnaround hours as arguments, eg: \"2019-10-18T16:02:00Z\" \"10\"");
         }
         var submissionDate = new Date(argv[0]);
         var turnaroundHours = parseInt(argv[1], 10);

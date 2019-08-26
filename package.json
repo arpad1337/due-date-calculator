@@ -6,12 +6,13 @@
   "scripts": {
     "build": "tsc --module commonjs --target ES5 --outDir ./dist ./src/*.ts",
     "start": "node ./dist/program.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && mocha ./test/*.spec.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^12.7.2",
+    "mocha": "^6.2.0",
     "tsc": "^1.20150623.0"
   }
 }
