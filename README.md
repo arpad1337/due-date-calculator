@@ -21,7 +21,7 @@ npm run build
 ```
 npm run test
  ```
-## Runing
+## Running
 
 Once running you have to feed submission date in the format of YY-MM-DDThh:mm:ssZ and the turnaround time in hours 
 
