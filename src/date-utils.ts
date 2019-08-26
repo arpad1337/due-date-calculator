@@ -28,7 +28,7 @@ export class DateUtils {
         let cursor = +submissionDate;
         let startHour = submissionDate.getHours();
 
-        while(remainingTime != 0) {
+        while(remainingTime !== 0) {
             if (DateUtils.isWeekend(new Date(cursor))) {
                 cursor += 24 * DateUtils.ONE_HOUR_MS;
                 continue;
