@@ -10,7 +10,7 @@ export class Program {
             throw new Error("You must supply submissionDate && turnaround hours as arguments, eg: \"2019-10-18T16:02:00Z\" \"10\"");
         }
         const submissionDate = new Date(argv[0]);
-        const turnaroundHours = parseInt(argv[1], 10); 
+        const turnaroundHours = Math.abs(parseInt(argv[1], 10)); 
         console.log("The task is due to:", DateUtils.calculateDueDate(submissionDate, turnaroundHours));
     }
 }
