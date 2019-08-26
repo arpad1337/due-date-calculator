@@ -11,7 +11,7 @@ export class Program {
         }
         const submissionDate = new Date(argv[0]);
         const turnaroundHours = Math.abs(parseInt(argv[1], 10)); 
-        console.log("The task is due to:", DateUtils.calculateDueDate(submissionDate, turnaroundHours));
+        console.log("The task is due to:", DateUtils.calculateDueDate(submissionDate, turnaroundHours).toString());
     }
 }
 

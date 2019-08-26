@@ -26,7 +26,14 @@ export class DateUtils {
         }
         let remainingTime = turnaroundHours * DateUtils.ONE_HOUR_MS;
         let cursor = +submissionDate;
-        let startHour = submissionDate.getHours();
+        let startHour;
+
+        if (submissionDate.getHours() > DateUtils.END_HOUR) {
+            cursor = +(submissionDate.setHours(DateUtils.START_HOUR)) + 24 * DateUtils.ONE_HOUR_MS;
+        }
+        else if (submissionDate.getHours() < DateUtils.START_HOUR) {
+            cursor = +(submissionDate.setHours(DateUtils.START_HOUR));
+        }
 
         while(remainingTime !== 0) {
             if (DateUtils.isWeekend(new Date(cursor))) {
