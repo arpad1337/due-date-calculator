@@ -6,7 +6,7 @@ export class DateUtils {
 
     /**
      * Checks whether a date is on weekend
-     * @param {Date} date - The time of recording the task
+     * @param {Date} date - Any given Date
      * @returns {boolean} 
      */
     public static isWeekend(date: Date): boolean {
