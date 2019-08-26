@@ -8,7 +8,7 @@
     "start": "node ./dist/program.js",
     "test": "npm run build && mocha ./test/*.spec.js"
   },
-  "author": "",
+  "author": "@rpi1337",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^12.7.2",
