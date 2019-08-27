@@ -13,14 +13,14 @@ describe('DateUtils test', function () {
         assert.equal(due, +(new Date("2019-08-27T14:02:00.000")));
     });
 
-    it('should round submission date and calculate date of 2019-08-08T07:02:00 with 1 hours as 2019-08-08T10:02:00', function () {
+    it('should round submission date and calculate date of 2019-08-08T07:02:00 with 1 hours as 2019-08-08T10:00:00', function () {
         const due = +DateUtils.calculateDueDate(new Date("2019-08-08T07:02:00"), 1);
-        assert.equal(due, +(new Date("2019-08-08T10:02:00")));
+        assert.equal(due, +(new Date("2019-08-08T10:00:00")));
     });
 
-    it('should round submission date and calculate date of 2019-08-12T18:02:00 with 1 hours as 2019-08-13T10:02:00', function () {
+    it('should round submission date and calculate date of 2019-08-12T18:02:00 with 1 hours as 2019-08-13T10:00:00', function () {
         const due = +DateUtils.calculateDueDate(new Date("2019-08-12T18:02:00"), 1);
-        assert.equal(due, +(new Date("2019-08-13T10:02:00")));
+        assert.equal(due, +(new Date("2019-08-13T10:00:00")));
     });
 
     it('should return true if weekend 2019-10-19T16:02:00', function () {

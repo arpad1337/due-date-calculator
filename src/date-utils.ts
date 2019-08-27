@@ -29,10 +29,10 @@ export class DateUtils {
         let startHour;
 
         if (submissionDate.getHours() > DateUtils.END_HOUR) {
-            cursor = +(submissionDate.setHours(DateUtils.START_HOUR)) + 24 * DateUtils.ONE_HOUR_MS;
+            cursor = +(submissionDate.setHours(DateUtils.START_HOUR)) + 24 * DateUtils.ONE_HOUR_MS  - submissionDate.getMinutes() * 60 * 1000 - submissionDate.getSeconds() * 1000;
         }
         else if (submissionDate.getHours() < DateUtils.START_HOUR) {
-            cursor = +(submissionDate.setHours(DateUtils.START_HOUR));
+            cursor = +(submissionDate.setHours(DateUtils.START_HOUR) - submissionDate.getMinutes() * 60 * 1000 - submissionDate.getSeconds() * 1000);
         }
 
         while(remainingTime !== 0) {
