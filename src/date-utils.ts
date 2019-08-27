@@ -1,6 +1,8 @@
 export class DateUtils {
 
     public static ONE_HOUR_MS = 60 * 60 * 1000;
+    public static ONE_MINUTE_MS = 60 * 1000;
+    public static ONE_SECOND_MS = 1000;
     public static START_HOUR = 9;
     public static END_HOUR = 17;
 
@@ -29,10 +31,15 @@ export class DateUtils {
         let startHour;
 
         if (submissionDate.getHours() > DateUtils.END_HOUR) {
-            cursor = +(submissionDate.setHours(DateUtils.START_HOUR)) + 24 * DateUtils.ONE_HOUR_MS  - submissionDate.getMinutes() * 60 * 1000 - submissionDate.getSeconds() * 1000;
+            cursor = +(submissionDate.setHours(DateUtils.START_HOUR)) + 
+                        24 * DateUtils.ONE_HOUR_MS  - 
+                        submissionDate.getMinutes() * DateUtils.ONE_MINUTE_MS - 
+                        submissionDate.getSeconds() * DateUtils.ONE_SECOND_MS;
         }
         else if (submissionDate.getHours() < DateUtils.START_HOUR) {
-            cursor = +(submissionDate.setHours(DateUtils.START_HOUR) - submissionDate.getMinutes() * 60 * 1000 - submissionDate.getSeconds() * 1000);
+            cursor = +(submissionDate.setHours(DateUtils.START_HOUR)) - 
+                        submissionDate.getMinutes() * DateUtils.ONE_MINUTE_MS - 
+                        submissionDate.getSeconds() * DateUtils.ONE_SECOND_MS;
         }
 
         while(remainingTime !== 0) {
