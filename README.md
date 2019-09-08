@@ -1,4 +1,4 @@
-# Due Date Calculator
+# Due Date Calculator [![Build Status](https://travis-ci.org/arpad1337/due-date-calculator.svg?branch=master)](https://travis-ci.org/arpad1337/due-date-calculator)
 
 Implemented by [rpi1337](https://twitter.com/rpi1337)
 
