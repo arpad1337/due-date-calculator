@@ -5,8 +5,8 @@ Implemented by [rpi1337](https://twitter.com/rpi1337)
 
 ## Prerequisites
 
- - NodeJS 10.0 and above
- - NPM 6.0 and above
+ - NodeJS 8.0 and above
+ - NPM 5.0 and above
 
 
 ## Build
